@@ -1,0 +1,16 @@
+**/main.dSYM
+**/.vscode
+**/.ipynb_checkpoints
+**/__pycache__
+**/.DS_Store
+pytorch/libtorch
+**/build
+**/checkpoint
+**/*.out
+
+# ignore files greater than 100M
+pytorch/libtorch/lib/libtorch_cpu.so
+pytorch/libtorch/lib/libtorch_cuda.so
+pytorch/libtorch/lib/libdnnl.a
+pytorch/data/cifar-10-python.tar.gz
+pytorch/data/cifar-10-binary.tar.gz
