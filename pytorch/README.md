@@ -2,6 +2,7 @@
 # Install cuDNN
 ## Tar file installation (choose version of your choice)
 ```
+sudo apt-get install xz-utils # try bellow first, if fails, try this
 tar -xvf cudnn-11.3-linux-x64-v8.2.1.32.tar.xz 
 sudo cp cuda/include/cudnn*.h /usr/local/cuda-11.3/include
 sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda-11.3/lib64
@@ -22,6 +23,7 @@ sudo ln -sfT /usr/local/cuda-11.3 /usr/local/cuda
 # LibTorch C++
 *libtorch can be downloaded from the official pytorch website*
 ```bash
+sudo apt-get install unzip # try bellow first, if fails, try this
 unzip /path/to/libtorch-cxx11-abi-shared-with-deps-1.12.0+cu113.zip -d /path/to/cpp-cuda-deeplearning/pytorch/  
 ```
 
