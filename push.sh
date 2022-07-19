@@ -9,6 +9,10 @@ echo 'pytorch/libtorch' >> .gitignore
 echo '**/build' >> .gitignore
 echo '**/checkpoint' >> .gitignore
 echo '**/*.out' >> .gitignore
+echo 'cpp/bin' >> .gitignore
+echo 'cpp/obj' >> .gitignore
+echo 'cpp/lib/*.o' >> .gitignore
+echo 'cpp/lib/*.so' >> .gitignore
 
 echo '' >> .gitignore
 echo '# ignore files greater than 100M' >> .gitignore
