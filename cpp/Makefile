@@ -7,11 +7,11 @@ SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 # -I is a preprocessor flag, not a compiler flag
-CPPFLAGS := -Iinclude -MMD -MP
+CPPFLAGS := -Iinclude -Ilibs/include -MMD -MP
 # C++ compiler flag
 CXXFLAGS := -std=c++17 -Wall
 # Linker parameter flags, -L is a linker flag
-LDFLAGS  := -Llib
+LDFLAGS  := -Llibs/lib
 # Linker library flags
 LDLIBS   := -llibrary
 

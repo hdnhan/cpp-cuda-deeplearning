@@ -3,14 +3,14 @@
 **/.ipynb_checkpoints
 **/__pycache__
 **/.DS_Store
+cpp/bin
+cpp/build
+cpp/obj
+cpp/libs/lib
 pytorch/libtorch
 **/build
 **/checkpoint
 **/*.out
-cpp/bin
-cpp/obj
-cpp/lib/*.o
-cpp/lib/*.so
 
 # ignore files greater than 100M
 pytorch/libtorch/lib/libtorch_cpu.so

@@ -1,18 +1,24 @@
 #!/bin/bash
 
+# general
 echo '**/main.dSYM' > .gitignore
 echo '**/.vscode' >> .gitignore
 echo '**/.ipynb_checkpoints' >> .gitignore
 echo '**/__pycache__' >> .gitignore
 echo '**/.DS_Store' >> .gitignore
+
+# cpp
+echo 'cpp/bin' >> .gitignore
+echo 'cpp/build' >> .gitignore
+echo 'cpp/obj' >> .gitignore
+echo 'cpp/libs/lib' >> .gitignore
+
+
 echo 'pytorch/libtorch' >> .gitignore
 echo '**/build' >> .gitignore
 echo '**/checkpoint' >> .gitignore
 echo '**/*.out' >> .gitignore
-echo 'cpp/bin' >> .gitignore
-echo 'cpp/obj' >> .gitignore
-echo 'cpp/lib/*.o' >> .gitignore
-echo 'cpp/lib/*.so' >> .gitignore
+
 
 echo '' >> .gitignore
 echo '# ignore files greater than 100M' >> .gitignore
