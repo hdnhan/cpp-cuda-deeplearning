@@ -1,4 +1,6 @@
-**To compile programs in folder cuda/ which is a copy of this repo: https://github.com/CoffeeBeforeArch/cuda_programming**
+**To compile programs in folder cuda/ which combine of these repos: [Nvidia Website](https://developer.nvidia.com/gpu-accelerated-libraries), [Nvidia Github Examples](https://github.com/NVIDIA/CUDALibrarySamples) and, [CoffeeBeforeArch Github](https://github.com/CoffeeBeforeArch/cuda_programming).**
+
+Another interesting topic: int32_t vs float32 both have the same size in memory, but their behavior is quite different, read [stackoverflow](https://stackoverflow.com/questions/4806944/what-is-the-difference-between-the-float-and-integer-data-type-when-the-size-is), [wiki](https://en.wikipedia.org/wiki/IEEE_754-1985#cite_note-3https://en.wikipedia.org/wiki/IEEE_754-1985#cite_note-3) and, [wiki](https://en.wikipedia.org/wiki/Single-precision_floating-point_format), which heavily affect accuracy.
 
 # Install CUDA
 ## Install Nvidia driver

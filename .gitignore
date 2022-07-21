@@ -7,10 +7,11 @@ cpp/bin
 cpp/build
 cpp/obj
 cpp/libs/lib
+cuda/**/build
 pytorch/libtorch
-**/build
-**/checkpoint
-**/*.out
+pytorch/**/build
+pytorch/**/checkpoint
+pytorch/**/*.out
 
 # ignore files greater than 100M
 pytorch/libtorch/lib/libtorch_cpu.so

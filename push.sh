@@ -13,11 +13,14 @@ echo 'cpp/build' >> .gitignore
 echo 'cpp/obj' >> .gitignore
 echo 'cpp/libs/lib' >> .gitignore
 
+# cuda
+echo 'cuda/**/build' >> .gitignore
 
+# pytorch
 echo 'pytorch/libtorch' >> .gitignore
-echo '**/build' >> .gitignore
-echo '**/checkpoint' >> .gitignore
-echo '**/*.out' >> .gitignore
+echo 'pytorch/**/build' >> .gitignore
+echo 'pytorch/**/checkpoint' >> .gitignore
+echo 'pytorch/**/*.out' >> .gitignore
 
 
 echo '' >> .gitignore
