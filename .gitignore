@@ -6,7 +6,7 @@
 cpp/bin
 cpp/build
 cpp/obj
-cpp/libs/lib
+cpp/lib/lib
 cuda/**/build
 pytorch/libtorch
 pytorch/**/build

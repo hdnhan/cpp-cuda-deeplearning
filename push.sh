@@ -11,7 +11,7 @@ echo '**/.DS_Store' >> .gitignore
 echo 'cpp/bin' >> .gitignore
 echo 'cpp/build' >> .gitignore
 echo 'cpp/obj' >> .gitignore
-echo 'cpp/libs/lib' >> .gitignore
+echo 'cpp/lib/lib' >> .gitignore
 
 # cuda
 echo 'cuda/**/build' >> .gitignore
