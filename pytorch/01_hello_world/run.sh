@@ -13,5 +13,5 @@ fi
 
 # arg == 1, execute output from build
 if [ -z "$1" ] || [ $1 -ge 1 ]; then
-    ./build/main
+    ./build/bin/main
 fi

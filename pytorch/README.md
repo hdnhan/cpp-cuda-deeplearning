@@ -5,14 +5,14 @@
 sudo apt-get install xz-utils # try bellow first, if fails, try this
 tar -xvf cudnn-11.3-linux-x64-v8.2.1.32.tar.xz 
 sudo cp cuda/include/cudnn*.h /usr/local/cuda-11.3/include
-sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda-11.3/lib64
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda-11.3/lib64
 sudo chmod a+r /usr/local/cuda-11.3/include/cudnn*.h /usr/local/cuda-11.3/lib64/libcudnn*
 ```
 
 ## Common
 ### Use alias
 ```bash
-sudo ln -sfT /usr/local/cuda-11.3 /usr/local/cuda
+sudo ln -sf /usr/local/cuda-11.3 /usr/local/cuda
 ```
 
 # Install OpenCV:
@@ -33,39 +33,40 @@ unzip /path/to/libtorch-cxx11-abi-shared-with-deps-1.12.0+cu113.zip -d /path/to/
 
 **Reference**: https://github.com/prabhuomkar/pytorch-cpp
 ## 01_hello_world
-```
-mkdir build
+```bash
 ./run.sh
 ```
+*Run this command for all the examples in the folder.*
 
 ## 02_pretrained_model
 - Training by using Python and Pytorch
   - Save the model state
   - Save the traced model
-- Inference using Python or C++ (with Pytorch)
+- Inference using Python or LibTorch C++
   - Load the model state by Python
   - Load the traced model by C++ (why input is IValue???)
 
-
 ## 03_train_model
-- Training by using C++ with libtorch
+- Training by using LibTorch C++
   - Network is defined by torch::nn::Sequential, struct, class
   - Using predefined datasets such as torch::data::datasets::MNIST
   - torch::save()
-- Inference using C++ with libtorch
+- Inference using LibTorch C++
   - torch::load()
   - can't load model using Python????
 
 ## 04_custom_data
-- Training by using C++ with libtorch
+- Training by using LibTorch C++
   - Network is defined by struct, class
   - Using custom dataset with csv file
   - torch::save()
-- Inference using C++ with libtorch
+- Inference using LibTorch C++
   - torch::load()
 
 ## 05_resnet
-- Training by using C++ with libtorch
-  - Network is defined by torch::nn::Sequential, struct, class
+- Training by using LibTorch C++
+  - Network is defined by class
   - Using Cifar10 dataset
   - torch::save()
+- Inference using LibTorch C++
+  - torch::load()

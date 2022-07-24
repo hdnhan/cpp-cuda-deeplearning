@@ -10,8 +10,6 @@ cpp/
 |   |-- *.cpp    # source files
 |   |-- main.cpp # main file
 |-- lib/         # third-party libraries
-|   |-- *.a      # static libraries
-|   |-- *.so     # shared libraries
 |-- bin/         # executables
 |-- obj/         # object files
 |-- Makefile
@@ -29,9 +27,17 @@ cpp/
 |   |-- *.cpp    # source files
 |   |-- main.cpp # main file
 |-- lib/         # third-party libraries
-|   |-- *.a      # static libraries
-|   |-- *.so     # shared libraries
 |-- build/       # build files
 |-- CMakeList.txt
 |-- cmake.sh     # script to run cmake
+```
+
+# Third-party libraries
+```bash
+libMyLib/
+|-- include/
+|   |-- *.h      # header files
+|-- lib/
+|   |-- *.a      # static libraries
+|   |-- *.so     # shared libraries
 ```

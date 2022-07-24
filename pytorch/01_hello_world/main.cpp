@@ -8,6 +8,6 @@ int main() {
 
     torch::Tensor tensor = torch::eye(3).to(device);
     std::cout << tensor << std::endl;
-    
+
     return 0;
 }

@@ -5,16 +5,15 @@
 #include <string>
 #include <vector>
 
-#include "utils/csv_dataset.h"
-#include "utils/folder_dataset.h"
-#include "utils/network.h"
+#include "data.h"
+#include "network.h"
 
 int main() {
     torch::Device device(torch::cuda::is_available() ? torch::kCUDA : torch::kCPU);
     std::cout << device << std::endl;
 
     // Define model
-    ConvNet2 net;
+    network::Net1 net;
     torch::load(net, "./checkpoint/model.pt");
     net->to(device);
 
@@ -22,7 +21,7 @@ int main() {
     std::string data_dir = "../data/pets";
     std::vector<int64_t> image_size = {256, 256};
 
-    auto testset = dataset::CsvDataet(data_dir, image_size, dataset::CsvDataet::Mode::kTest)
+    auto testset = data::CsvDataset(data_dir, image_size, data::CsvDataset::Mode::kTest)
                        .map(torch::data::transforms::Normalize<>(0.5, 0.5))
                        .map(torch::data::transforms::Stack<>());
     auto testloader = torch::data::make_data_loader<

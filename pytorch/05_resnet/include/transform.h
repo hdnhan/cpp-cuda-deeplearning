@@ -6,6 +6,7 @@
 #include <vector>
 
 namespace transform {
+
 class RandomHorizontalFlip : public torch::data::transforms::TensorTransform<torch::Tensor> {
    public:
     // Creates a transformation that randomly horizontally flips a tensor.

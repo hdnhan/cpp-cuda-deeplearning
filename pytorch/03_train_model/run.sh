@@ -15,6 +15,6 @@ fi
 
 # arg == 1, execute output from build
 if [ -z "$1" ] || [ $1 -ge 1 ]; then
-    ./build/train
-    ./build/inference
+    ./build/bin/train
+    ./build/bin/inference
 fi

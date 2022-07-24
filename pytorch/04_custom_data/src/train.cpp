@@ -5,33 +5,32 @@
 #include <string>
 #include <vector>
 
-#include "utils/csv_dataset.h"
-#include "utils/folder_dataset.h"
-#include "utils/network.h"
+#include "data.h"
+#include "network.h"
 
 int main() {
     torch::Device device(torch::cuda::is_available() ? torch::kCUDA : torch::kCPU);
     std::cout << device << std::endl;
 
     // Define model
-    ConvNet2 net;
+    network::Net2 net;
     net->to(device);
 
     // Load the data
     std::string data_dir = "../data/pets";
     std::vector<int64_t> image_size = {256, 256};
 
-    auto trainset = dataset::CsvDataet(data_dir, image_size, dataset::CsvDataet::Mode::kTrain)
+    auto trainset = data::CsvDataset(data_dir, image_size, data::CsvDataset::Mode::kTrain)
                         .map(torch::data::transforms::Normalize<>(0.5, 0.5))
                         .map(torch::data::transforms::Stack<>());
-    auto testset = dataset::CsvDataet(data_dir, image_size, dataset::CsvDataet::Mode::kTest)
+    auto testset = data::CsvDataset(data_dir, image_size, data::CsvDataset::Mode::kTest)
                        .map(torch::data::transforms::Normalize<>(0.5, 0.5))
                        .map(torch::data::transforms::Stack<>());
 
-    // auto trainset = dataset::FolderDataset(data_dir, image_size, dataset::FolderDataset::Mode::kTrain)
+    // auto trainset = data::FolderDataset(data_dir, image_size, data::FolderDataset::Mode::kTrain)
     //                     .map(torch::data::transforms::Normalize<>(0.5, 0.5))
     //                     .map(torch::data::transforms::Stack<>());
-    // auto testset = dataset::FolderDataset(data_dir, image_size, dataset::FolderDataset::Mode::kTest)
+    // auto testset = data::FolderDataset(data_dir, image_size, data::FolderDataset::Mode::kTest)
     //                    .map(torch::data::transforms::Normalize<>(0.5, 0.5))
     //                    .map(torch::data::transforms::Stack<>());
 
@@ -104,6 +103,6 @@ int main() {
         printf("Epoch %d/%d: train_loss: %.4f train_acc: %.4f test_loss: %.4f test_acc: %.4f time: %0.4f\n",
                e + 1, epochs, train_loss, train_acc, test_loss, test_acc, diff.count());
     }
-    
+
     return 0;
 }

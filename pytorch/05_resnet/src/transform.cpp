@@ -8,6 +8,7 @@ using torch::indexing::Slice;
 
 namespace transform {
 namespace {
+    
 double rand_double() {
     return torch::rand(1)[0].item<double>();
 }

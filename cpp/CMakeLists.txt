@@ -13,9 +13,9 @@ print(CMAKE_VERSION PROJECT_NAME CMAKE_SOURCE_DIR)
 
 file(GLOB SRC_FILES "src/*.cpp")
 message("SRC_FILES: ${SRC_FILES}")
-file(GLOB LIB_FILES "libs/lib/*.so")
+file(GLOB LIB_FILES "lib/lib/*.so")
 message("LIB_FILES: ${LIB_FILES}")
 
 add_executable(main ${SRC_FILES})
-target_include_directories(main PUBLIC include libs/include)
+target_include_directories(main PUBLIC include lib/include)
 target_link_libraries(main ${LIB_FILES})
