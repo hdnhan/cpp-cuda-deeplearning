@@ -3,7 +3,7 @@
 # arg is null or 3, execute cmake
 if [ -z "$1" ] || [ $1 -eq 3 ]; then
     mkdir -p build && rm -rf ./build/*
-    cmake -S . -B ./build
+    cmake -S . -B ./build -DCMAKE_BUILD_TYPE=Release # Release vs Debug
 fi
 
 # arg == 2, execute make

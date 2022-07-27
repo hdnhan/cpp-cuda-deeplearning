@@ -21,6 +21,14 @@ show:
 
 .PHONY: all clean
 
+# debug
+debug: CXXFLAGS += -DDEBUG -O0 -g
+debug: all
+
+# release
+release: CXXFLAGS += -DRELEASE -O3 -s
+release: all
+
 all: $(EXE)
 
 $(EXE): $(OBJ) | $(BIN_DIR)

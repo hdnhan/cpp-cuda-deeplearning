@@ -16,6 +16,9 @@ message("SRC_FILES: ${SRC_FILES}")
 file(GLOB LIB_FILES "lib/lib/*.so")
 message("LIB_FILES: ${LIB_FILES}")
 
+# By default put binaries in build/bin (pre-install)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 add_executable(main ${SRC_FILES})
 target_include_directories(main PUBLIC include lib/include)
 target_link_libraries(main ${LIB_FILES})

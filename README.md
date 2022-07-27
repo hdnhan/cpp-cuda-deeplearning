@@ -52,7 +52,7 @@ ls /usr/local | grep cuda # => different cuda versions
 /usr/local/cuda-11.3/bin/nvcc --version
 ```
 
-### Use alias
+#### Use alias
 If multiple versions, to use `cuda` instead `cuda-11.3`. Reference https://stackoverflow.com/questions/45477133/how-to-change-cuda-version
 ```bash
 sudo ln -sf /usr/local/cuda-11.3 /usr/local/cuda

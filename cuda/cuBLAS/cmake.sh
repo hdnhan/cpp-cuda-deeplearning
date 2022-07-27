@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p build && rm -rf ./build/*
-cmake -S . -B ./build
+cmake -S . -B ./build -DCMAKE_BUILD_TYPE=Release # Release vs Debug
 make -C ./build
 
 echo -e "\n01-axpy:"
