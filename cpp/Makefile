@@ -15,11 +15,12 @@ LDFLAGS  := -Llib/lib
 # Linker library flags
 LDLIBS   := -llibrary
 
+# Just label for some commands, not target file
+.PHONY: all clean show debug release
+
 show:
 	@echo $(SRC)
 	@echo $(OBJ)
-
-.PHONY: all clean
 
 # debug
 debug: CXXFLAGS += -DDEBUG -O0 -g
